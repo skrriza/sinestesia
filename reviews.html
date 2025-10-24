@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envie suas reviews!</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Courier+Prime&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #c84646;
+      font-family: 'Courier Prime', monospace;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Container principal */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 0 5vw;
+      overflow: hidden;
+    }
+
+    /* Fundo com círculos e estrelas */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.05) 10%, transparent 10%),
+                  radial-gradient(circle at 70% 50%, rgba(255,255,255,0.05) 20%, transparent 20%),
+                  radial-gradient(circle at 70% 50%, rgba(255,255,255,0.05) 30%, transparent 30%),
+                  radial-gradient(circle at 70% 50%, rgba(255,255,255,0.05) 40%, transparent 40%);
+      background-repeat: no-repeat;
+      background-size: 200% 200%;
+      z-index: 0;
+    }
+
+    /* Estrelas decorativas */
+    .star {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: #fff8e1;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+                         50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .star:nth-child(1) { top: 10%; left: 15%; transform: scale(0.7) rotate(15deg); }
+    .star:nth-child(2) { bottom: 15%; left: 30%; transform: scale(1) rotate(-10deg); }
+    .star:nth-child(3) { bottom: 10%; right: 15%; transform: scale(1.2) rotate(5deg); }
+
+    /* Lado esquerdo com a imagem */
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .trompete.png {
+      height: 90%;
+      object-fit: contain;
+    }
+
+    /* Lado direito com o texto */
+    .right {
+      flex: 1;
+      color: #fff8e1;
+      text-align: left;
+      padding: 2rem;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Righteous', sans-serif;
+      font-size: 4rem;
+      color: #fff8e1;
+      margin-bottom: 1rem;
+      line-height: 1.1em;
+      text-shadow: 2px 2px 0 #b12f2f;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.6em;
+    }
+
+    a {
+      color: #000;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #fff8e1;
+      background: #000;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .trompete.png {
+        height: 50%;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Estrelas decorativas -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+    <!-- Homem com trompete -->
+    <section class="left">
+      <img src="imagens/trompete.png">
+    </section>
+
+    <!-- Texto -->
+    <section class="right">
+      <h1>Envie suas<br>reviews!</h1>
+      <p>
+        Responda o formulário por 
+        <a href="https://forms.gle/mqZGBzEp857aDk1a8">esse link!</a><br>
+        Nossa equipe vai atenciosamente selecionar as melhores e publicar no nosso site 
+        [te dando os devidos créditos ;)]
+      </p>
+    </section>
+  </div>
+</body>
+</html>

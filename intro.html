@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinestesia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #c34242;
+      font-family: 'Space Mono', monospace;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      min-height: 100vh;
+      background: radial-gradient(circle at 30% 30%, #c34242 0%, #a83535 80%);
+    }
+
+    /* --- SEÇÃO DE TEXTO --- */
+    .text-section {
+      flex: 1;
+      color: #fff5e1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5%;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Righteous', cursive;
+      font-size: 5rem;
+      color: #fbeed7;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 0px #b53030;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #fffaf0;
+      margin-bottom: 2em;
+      line-height: 1.5em;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      background-color: #c75146;
+      color: #fff;
+      border: 3px solid #6a1b1b;
+      padding: 15px 30px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 2px 2px 0px #6a1b1b;
+    }
+
+    .btn:hover {
+      background-color: #e36955;
+      transform: translateY(-3px);
+      box-shadow: 3px 3px 0px #6a1b1b;
+    }
+
+    /* --- SEÇÃO DO VINIL (SEM ANIMAÇÃO) --- */
+    .vinyl {
+      flex: 1;
+      background-image: url('imagens/vinil.png'); /* sua imagem PNG */
+      background-repeat: no-repeat;
+      background-size: cover; /* cobre toda a metade direita */
+      background-position: center right; /* posiciona o vinil bem à direita */
+      height: 100vh;
+    }
+
+    /* --- RESPONSIVIDADE --- */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .text-section {
+        width: 100%;
+        text-align: center;
+        padding: 10% 5%;
+      }
+
+      .vinyl {
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-section">
+      <h1>Sinestesia</h1>
+      <p>Onde você pode tocar a música,<br>tanto quanto ela te toca.</p>
+
+      <div class="buttons">
+        <a href="catalogo.html" class="btn">Catálogo de Reviews:</a>
+        <a href="reviews.html" class="btn">Envie reviews!</a>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="FINALIZADO_Que_procura.html" class="btn">Como funciona?</a>
+          <a href="fundadores.html" class="btn">Sobre nós...</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="vinyl"></div>
+  </div>
+</body>
+</html>

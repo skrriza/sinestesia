@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Switch - Charlie Puth</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rye&family=Space+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7edc7;
+      background-image: 
+        radial-gradient(circle at 30% 40%, rgba(0, 0, 0, 0.03) 0%, transparent 60%),
+        url('imagens/stars-bg.png'); /* opcional se quiser colocar estrelas como imagem */
+      font-family: 'Space Mono', monospace;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Estrelas decorativas (feitas com CSS) */
+    .star {
+      position: absolute;
+      color: #c34242;
+      font-size: 3rem;
+    }
+
+    .star1 { top: 20%; left: 10%; transform: rotate(-10deg); }
+    .star2 { top: 70%; left: 12%; transform: rotate(15deg); }
+    .star3 { top: 25%; right: 10%; transform: rotate(20deg); }
+    .star4 { bottom: 15%; right: 15%; transform: rotate(-25deg); }
+
+    h1 {
+      font-family: 'Rye', cursive;
+      font-size: 3.5rem;
+      margin: 20px 0 40px;
+    }
+
+    img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border: 5px solid #000;
+      box-shadow: 4px 4px 0px #a37a32;
+    }
+
+    p {
+      margin-top: 25px;
+      font-size: 1.2rem;
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #000;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #c34242;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      img {
+        width: 250px;
+        height: 250px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Estrelas vermelhas -->
+  <div class="star star1">★</div>
+  <div class="star star2">★</div>
+  <div class="star star3">★</div>
+  <div class="star star4">★</div>
+
+  <h1>Light Switch</h1>
+
+  <img src="imagens/lightswitch.png" alt="Capa da música Light Switch - Charlie Puth">
+
+  <p>Single (2022) - Charlie Puth</p>
+
+  <a href="https://open.spotify.com/intl-pt/track/3AVXwaOGCEL8cmBecfcsFJ?si=77bef854f46e476e" target="_blank">
+    Ouça aqui!
+  </a>
+
+</body>
+</html>

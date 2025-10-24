@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundadores do Site</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Courier+Prime&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #c84646;
+      font-family: 'Courier Prime', monospace;
+      height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      color: #fff8e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* Fundo com círculos */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 10%, transparent 10%),
+                  radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 20%, transparent 20%),
+                  radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 30%, transparent 30%),
+                  radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 40%, transparent 40%);
+      z-index: 0;
+    }
+
+    /* Estrelas decorativas */
+    .star {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #fff8e1;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+                         50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .star:nth-child(1) { top: 15%; left: 10%; transform: scale(0.6) rotate(20deg); }
+    .star:nth-child(2) { top: 25%; right: 15%; transform: scale(0.9) rotate(-10deg); }
+    .star:nth-child(3) { bottom: 10%; right: 25%; transform: scale(1) rotate(15deg); }
+
+    h1 {
+      font-family: 'Righteous', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      text-shadow: 2px 2px 0 #b12f2f;
+      z-index: 2;
+    }
+
+    /* Layout principal — 3 colunas */
+    .founders {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      width: 90%;
+      max-width: 1200px;
+      justify-items: center;
+      align-items: start;
+      z-index: 2;
+    }
+
+    .founder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .founder img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      background-color: #fff8e1;
+      border-radius: 0;
+    }
+
+    .info h2 {
+      font-family: 'Righteous', sans-serif;
+      font-size: 1.8rem;
+      color: #fff8e1;
+      text-shadow: 2px 2px 0 #b12f2f;
+      margin-bottom: 0.5rem;
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      color: #fff8e1;
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .founders {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .founder img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+
+  <h1>Conheça os fundadores do site!</h1>
+
+  <div class="founders">
+    <div class="founder">
+      <img src="imagens/iza.png" alt="Iza Vargas">
+      <div class="info">
+        <h2>Iza Vargas</h2>
+        <p>Principal programadora e designer auxiliar.</p>
+      </div>
+    </div>
+
+    <div class="founder">
+      <img src="imagens/pedro.png" alt="Pedro Velloso">
+      <div class="info">
+        <h2>Pedro Velloso</h2>
+        <p>Idealizador do projeto e diretor criativo.</p>
+      </div>
+    </div>
+
+    <div class="founder">
+      <img src="imagens/lucy.png" alt="Lucy Corrêa">
+      <div class="info">
+        <h2>Lucy Corrêa</h2>
+        <p>Designer visual e idealizadora estética do site.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
